@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <input id="one">
+    <button onclick="Plus()"> + </button> 
+    <button onclick="Minus()"> - </button>
+    <button onclick="Multiply()"> * </button> 
+    <button onclick="Division()"> / </button> 
+    <input id="two">
+    <br>
+    <input id="total">
+    <script>
+        function Plus(){
+            let Num = Number(one.value)   // Can also use '+Number' to turn a string into a number!
+            let Num2 = Number(two.value)  // i.e - Number(+number.value)
+            console.log(Num + Num2)
+            total.value = Num + Num2
+        }
+        function Minus(){
+            let Num = Number(one.value)
+            let Num2 = Number(two.value)
+            console.log(Num - Num2)
+            total.value = Num - Num2
+        }
+        function Multiply() {
+            let Num = Number(one.value)
+            let Num2 = Number(two.value)
+            console.log(Num * Num2)
+            total.value = Num * Num2
+        }
+        function Division() {
+            let Num = Number(one.value)
+            let Num2 = Number(two.value)
+            console.log(Num / Num2)
+            total.value = Num / Num2
+        }
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="myName"/>
+    <button onclick="printName()">Print My Name</button>
+    
+    <br> <br> <br>
+
+    <button onclick="printLast()">Print My Last Name</button>
+    
+    <br>
+
+    <button onclick="displayDateTime()">Show Date and Time</button>
+    
+    <br>
+
+    <button onclick="displayFormattedDate()">Show Formatted Date</button>
+   
+    <br> <br> <br>
+
+    <input id="Hello"/>
+    <button onclick="printHello()">Prac 1</button>
+    
+    <br> <br> <br>
+
+    <input id="myName1"/>
+    <input id="myName2"/>
+    <button onclick="copyName()">Prac 2</button>
+
+    <script>
+        function printName() {
+            console.log(myName.value)
+        }
+        function printLast() {
+            console.log(myLast.value)
+        }
+        function displayDateTime() {
+            const now = new Date();
+            console.log(now.toLocaleString());
+        }
+        function displayFormattedDate() {
+            const now = new Date();
+            const day = now.getDate().toString().padStart(2, '0'); // Ensure two digits
+            const month = (now.getMonth() + 1).toString().padStart(2, '0'); // Month is zero-based
+            const year = now.getFullYear().toString();
+            console.log(`${day}-${month}-${year}`);
+        }
+
+
+        // PRAC 1
+        function printHello(){
+            console.log('Hello',Hello.value)
+        }
+
+        // PRAC 2   
+        function copyName(){
+            myName2.value = myName1.value
+            console.log(myName2.value)
+        }
+
+        
+    </script>
+</body>
+</html>
